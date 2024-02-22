@@ -62,6 +62,7 @@ local Toggle = Tab:CreateToggle({
    Flag = "Toggle12", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
          while Value == true do
+            task.wait(0.00001)
             for i,v in pairs (workspace:GetDescendants()) do
                 if v.Name == "Finish" then
                     v.CanCollide = false
@@ -81,7 +82,7 @@ local Toggle1 = Tab:CreateToggle({
    Flag = "Toggle123", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
             while collectcoinsloop == true do
-               task.wait()
+               task.wait(0.00001)
                 for i,v in pairs (workspace:GetDescendants()) do
                     if v.Name == "Gem" then
                         v.Transparency = 1
