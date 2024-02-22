@@ -64,30 +64,32 @@ local AutoMathThingyMcJigglybobs = Tab:CreateToggle({
     CurrentValue = false,
     Flag = "Toggle11412", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
-        local automathloop
-        if Value then
-            automathloop = true
-            while automathloop do
-                for i = 1, 10 do
-                    if not automathloop then
-                        break
+        while true do
+task.wait(0.1)
+            number = 0
+            for i = 1, 10 do
+                if CurrentValue == true then
+                    number = number + 1
+                    local s = game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].MainText.Text
+                    local e = s:gsub("=","")
+                    local g = e:gsub("?","")
+                    local x = g:gsub(" ","")
+                    local y = x
+                    local f = loadstring("return " .. y)()
+                    wait()
+                    game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].Box.Text = f
+                    task.wait()
+                    local button = game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].Enter
+        
+                    local events = {"MouseButton1Click", "MouseButton1Down", "Activated"}
+                    for i,v in pairs(events) do
+                        for i,v in pairs(getconnections(button[v])) do
+                            v:Fire()
                     end
-                    local mathManiaGui = game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number]
-                    if mathManiaGui then
-                        local mainText = mathManiaGui.MainText.Text
-                        local expression = mainText:gsub("[=?]", "")
-                        local result = loadstring("return " .. expression)()
-                        mathManiaGui.Box.Text = tostring(result)
-                        game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].Enter:Fire()
-                        wait(5) -- Adjust this delay to 5 seconds
-                    end
-                end
-                wait(5) -- Add a delay to prevent excessive CPU usage
+		end
+                    task.wait(0.5)
             end
-        else
-            automathloop = false
-        end
-    end
+    end,
 })
 
 
