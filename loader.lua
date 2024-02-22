@@ -6,7 +6,7 @@ wait()
 local Window = Rayfield:CreateWindow({
    Name = "Jann Hub",
    LoadingTitle = "Loading Jann Hub",
-   LoadingSubtitle = "by Jack & Ven | .gg/pams",
+   LoadingSubtitle = "by Jack & Venn | .gg/pams",
    ConfigurationSaving = {
       Enabled = true,
       FolderName = nil, -- Create a custom folder for your hub/game
