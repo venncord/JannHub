@@ -65,6 +65,7 @@ local ToggleVotesThing = Tab:CreateToggle({
    Flag = "Toggle121412", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
     game.ReplicatedStorage.Season.Voting.Votes.ChildAdded:Connect(function(v)
+					if Value == true then
         PlayerVoted = game.ReplicatedStorage.Season.Players[v.Value].Value
         PlayerPicked = game.ReplicatedStorage.Season.Players[v.Name].Value
                SEND = PlayerVoted .." voted for " ..PlayerPicked
@@ -81,7 +82,10 @@ local ToggleVotesThing = Tab:CreateToggle({
 			end
 		},
 	},
+end
+						end
 })
+			
    end,
 })
 
@@ -135,7 +139,7 @@ local Toggle1 = Tab:CreateToggle({
    end,
 })
 
-local Section1 = Tab:CreateSection("Modifications - Modify the games settings",false)
+local Section1 = Tab:CreateSection("Misc",false)
 
 local Input = Tab:CreateInput({
    Name = "Buy Character",
@@ -150,5 +154,18 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Buy"):FireServer(unpack(args))
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Remove barriers",
+   Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+        for i,v in pairs (workspace:GetDescendants()) do
+            if v.Name == "Glass" then
+                v:Destroy()
+            end
+        end
    end,
 })
