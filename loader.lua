@@ -73,10 +73,7 @@ local ToggleVotesThing = Tab:CreateToggle({
                     Title = "Vote Detected",
                     Content = SEND,
                     Duration = 2.5,
-                    Image = 4483362458,
-                            end
-                        },
-                    }
+                    Image = 4483362458
                 })
             end
         end)
