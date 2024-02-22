@@ -25,7 +25,7 @@ local Window = Rayfield:CreateWindow({
       Key = "ilovemen231"
    }
 })
-local Tab = Window:CreateTab("Total Roblox Drama", 16451926444) -- Title, Image
+
 
 local Section = Tab:CreateSection("Game - Things that enhance gameplay",false)
 
@@ -54,7 +54,7 @@ local Button = Tab:CreateButton({
    end,
 })
 
-local Section1 = Tab:CreateSection("Modifications - Modify the games settings",false)
+local Tab = Window:CreateTab("Modifications", 16451926444) -- Title, Image
 
 local Input = Tab:CreateInput({
    Name = "Buy Character",
@@ -71,7 +71,3 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Buy"):FireServer(unpack(args))
    end,
 })
-
-   
-
-   
