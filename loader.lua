@@ -30,7 +30,7 @@ local Tab = Window:CreateTab("Total Roblox Drama", 16451926444) -- Title, Image
 
 local Section = Tab:CreateSection("Game - Things that enhance gameplay",false)
 
-local Button = Section:CreateButton({
+local Button = Tab:CreateButton({
    Name = "Get Safety Statue",
    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
@@ -55,7 +55,7 @@ local Button = Section:CreateButton({
    end,
 })
 
-local Toggle = Section:CreateToggle({
+local Toggle = Tab:CreateToggle({
    Name = "Auto Win Obbies",
    Info = "Speaks for itself.", -- Speaks for itself, Remove if none.
    CurrentValue = false,
@@ -74,7 +74,7 @@ local Toggle = Section:CreateToggle({
    end,
 })
 
-local Toggle = Section:CreateToggle({
+local Toggle = Tab:CreateToggle({
    Name = "Auto Collect Coins",
    Info = "Speaks for itself.", -- Speaks for itself, Remove if none.
    CurrentValue = false,
@@ -99,7 +99,7 @@ local Toggle = Section:CreateToggle({
 
 local Section1 = Tab:CreateSection("Modifications - Modify the games settings",false)
 
-local Input = Section1:CreateInput({
+local Input = Tab:CreateInput({
    Name = "Buy Character",
    Info = "Enter the text of the character you would like to purchase, it doesnt have to be a real character. Bypasses chat filter.", -- Speaks for itself, Remove if none.
    PlaceholderText = "Input Text",
