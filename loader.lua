@@ -89,14 +89,18 @@ local Toggle = Tab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle12", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
-         while Value == true do
+         while true do
             task.wait(0.00001)
+						if Value == true then
             for i,v in pairs (workspace:GetDescendants()) do
                 if v.Name == "Finish" then
                     v.CanCollide = false
                     v.Transparency = 1
                     wait()
                     v.Position = game.Players.LocalPlayer.Character.Torso.Position
+			else
+			print("yes")
+			end
                 end
             end
          end
