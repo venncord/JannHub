@@ -26,6 +26,33 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
+local Tab = Window:CreateTab("Game", 16451926444) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Find Bag",
+   Info = "Finds the bag automatically", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+   for i,v in pairs (workspace.Idols:GetDescendants()) do
+                if v.Name == "Bag" then
+                    v.hit.Transparency = 1
+                    v.hit.CanCollide = false
+                    wait()
+                    v.hit.Position = game.Players.LocalPlayer.Character.Torso.Position
+                    task.wait()
+                    v:Destroy()
+                    wait()
+                elseif v.Name == "SafetyStatue" then
+                    v.hit.Transparency = 1
+                    v.hit.CanCollide = false
+                    wait()
+                    v.hit.Position = game.Players.LocalPlayer.Character.Torso.Position
+                    wait()
+                end
+            end
+   end,
+})
+
 local Tab = Window:CreateTab("Modifications", 16451926444) -- Title, Image
 
 local Input = Tab:CreateInput({
