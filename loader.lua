@@ -60,37 +60,29 @@ local Button = Tab:CreateButton({
 
 local AutoMathThingyMcJigglybobs = Tab:CreateToggle({
     Name = "Auto Math",
-    Info = "Speaks for itself", -- Speaks for itself, Remove if none.
-    CurrentValue = false,
-    Flag = "Toggle11412", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Info = "Automatically solves math problems", -- Description of the toggle
+    CurrentValue = false, -- Initial state of the toggle
+    Flag = "Toggle11412", -- Unique identifier for the toggle
     Callback = function(Value)
-        while true do
-task.wait(0.1)
-            number = 0
-            for i = 1, 10 do
-                if CurrentValue == true then
-                    number = number + 1
-                    local s = game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].MainText.Text
-                    local e = s:gsub("=","")
-                    local g = e:gsub("?","")
-                    local x = g:gsub(" ","")
-                    local y = x
-                    local f = loadstring("return " .. y)()
-                    wait()
-                    game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].Box.Text = f
-                    task.wait()
-                    local button = game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].Enter
-        
-                    local events = {"MouseButton1Click", "MouseButton1Down", "Activated"}
-                    for i,v in pairs(events) do
-                        for i,v in pairs(getconnections(button[v])) do
-                            v:Fire()
+        while Value do -- Continue if the toggle is on
+            for number = 1, 10 do
+                local mathElement = game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number]
+                if mathElement then
+                    local mainText = mathElement.MainText.Text
+                    local expression = mainText:gsub("[=?]", ""):gsub(" ", "") -- Remove = and ? from the expression
+                    local result = loadstring("return " .. expression)() -- Evaluate the expression
+                    mathElement.Box.Text = tostring(result) -- Set the result to the box
+                    local enterButton = mathElement.Enter
+                    if enterButton then
+                        enterButton:Fire() -- Fire the button click event
                     end
-		end
-                    task.wait(0.5)
+                    wait(0.5) -- Wait for a short duration before processing the next math problem
+                end
             end
-    end,
+        end
+    end
 })
+
 
 
 local ToggleVotesThing = Tab:CreateToggle({
