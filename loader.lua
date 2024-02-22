@@ -26,7 +26,9 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab = Window:CreateTab("Game", 16451926444) -- Title, Image
+local Tab = Window:CreateTab("Total Roblox Drama", 16451926444) -- Title, Image
+
+local Section = Tab:CreateSection("Game - Things that enhance gameplay",false)
 
 local Button = Tab:CreateButton({
    Name = "Get Safety Statue",
@@ -53,7 +55,7 @@ local Button = Tab:CreateButton({
    end,
 })
 
-local Tab = Window:CreateTab("Modifications", 16451926444) -- Title, Image
+local Section1 = Tab:CreateSection("Modifications - Modify the games settings",false)
 
 local Input = Tab:CreateInput({
    Name = "Buy Character",
