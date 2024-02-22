@@ -29,8 +29,8 @@ local Window = Rayfield:CreateWindow({
 local Tab = Window:CreateTab("Game", 16451926444) -- Title, Image
 
 local Button = Tab:CreateButton({
-   Name = "Find Bag",
-   Info = "Finds the bag automatically", -- Speaks for itself, Remove if none.
+   Name = "Get Safety Statue",
+   Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
    for i,v in pairs (workspace.Idols:GetDescendants()) do
