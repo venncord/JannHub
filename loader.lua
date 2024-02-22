@@ -64,6 +64,7 @@ local AutoMathThingyMcJigglybobs = Tab:CreateToggle({
     CurrentValue = false,
     Flag = "Toggle11412", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
+        local automathloop
         if Value then
             automathloop = true
             while automathloop do
@@ -78,7 +79,7 @@ local AutoMathThingyMcJigglybobs = Tab:CreateToggle({
                         local result = loadstring("return " .. expression)()
                         mathManiaGui.Box.Text = tostring(result)
                         game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].Enter:Fire()
-                        wait(5) -- Adjust this delay as needed
+                        wait(5) -- Adjust this delay to 5 seconds
                     end
                 end
                 wait(5) -- Add a delay to prevent excessive CPU usage
