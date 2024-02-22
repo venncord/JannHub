@@ -128,7 +128,8 @@ local Toggle = Tab:CreateToggle({
    Callback = function(Value)
          while true do
             task.wait(1)
-						if Value == true then
+	if Value == true then
+	if game.Workspace:FindFirstChild("Finish") then
             for i,v in pairs (workspace:GetDescendants()) do
                 if v.Name == "Finish" then
                     v.CanCollide = false
@@ -139,6 +140,7 @@ local Toggle = Tab:CreateToggle({
 			print("yes")
 			end
                 end
+					end
             end
          end
    end,
