@@ -25,9 +25,6 @@ local Window = Rayfield:CreateWindow({
       Key = "ilovemen231"
    }
 })
-
-if game.GameId = '4889315193' then
-
 local Tab = Window:CreateTab("Total Roblox Drama", 16451926444) -- Title, Image
 
 local Section = Tab:CreateSection("Game - Things that enhance gameplay",false)
