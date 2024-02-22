@@ -58,6 +58,38 @@ local Button = Tab:CreateButton({
    end,
 })
 
+local AutoMathThingyMcJigglybobs = Tab:CreateToggle({
+    Name = "Auto Math",
+    Info = "Speaks for itself", -- Speaks for itself, Remove if none.
+    CurrentValue = false,
+    Flag = "Toggle11412", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        if Value then
+            automathloop = true
+            while automathloop do
+                for i = 1, 10 do
+                    if not automathloop then
+                        break
+                    end
+                    local mathManiaGui = game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number]
+                    if mathManiaGui then
+                        local mainText = mathManiaGui.MainText.Text
+                        local expression = mainText:gsub("[=?]", "")
+                        local result = loadstring("return " .. expression)()
+                        mathManiaGui.Box.Text = tostring(result)
+                        game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].Enter:Fire()
+                        wait() -- Adjust this delay as needed
+                    end
+                end
+                wait() -- Add a delay to prevent excessive CPU usage
+            end
+        else
+            automathloop = false
+        end
+    end
+})
+
+
 local ToggleVotesThing = Tab:CreateToggle({
     Name = "Notify Votes",
     Info = "Speaks for itself", -- Speaks for itself, Remove if none.
