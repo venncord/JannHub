@@ -78,10 +78,10 @@ local AutoMathThingyMcJigglybobs = Tab:CreateToggle({
                         local result = loadstring("return " .. expression)()
                         mathManiaGui.Box.Text = tostring(result)
                         game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].Enter:Fire()
-                        wait() -- Adjust this delay as needed
+                        wait(5) -- Adjust this delay as needed
                     end
                 end
-                wait() -- Add a delay to prevent excessive CPU usage
+                wait(5) -- Add a delay to prevent excessive CPU usage
             end
         else
             automathloop = false
