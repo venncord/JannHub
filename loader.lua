@@ -64,11 +64,11 @@ local Toggle6235 = Tab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle122125", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
-        while true do
-	task.wait()
+			        while true do
             number = 0
             for i = 1, 10 do
-                if Value == true then
+                function automathloopfix()
+                if CurrentValue == true then
                     number = number + 1
                     local s = game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].MainText.Text
                     local e = s:gsub("=","")
@@ -87,11 +87,9 @@ local Toggle6235 = Tab:CreateToggle({
                             v:Fire()
                         end
                     end
-                    task.wait(answerdelay)
+                    task.wait(0.0001)
                 end
-       
-				end
-				end
+            end
    end,
 })
 
