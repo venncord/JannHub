@@ -81,6 +81,7 @@ local Toggle1 = Tab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle123", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
+         collectcoinsloop = Value
             while collectcoinsloop == true do
                task.wait(0.00001)
                 for i,v in pairs (workspace:GetDescendants()) do
@@ -94,6 +95,36 @@ local Toggle1 = Tab:CreateToggle({
                         v.Position = game.Players.LocalPlayer.Character.Torso.Position
                     end
                 end
+         end
+   end,
+})
+
+local Toggle11 = Tab:CreateToggle({
+   Name = "Notify Votes",
+   Info = "Speaks for itself.", -- Speaks for itself, Remove if none.
+   CurrentValue = false,
+   Flag = "Toggle1231", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+            while Value == true do
+               task.wait(0.00001)
+    game.ReplicatedStorage.Season.Voting.Votes.ChildAdded:Connect(function(v)
+        PlayerVoted = game.ReplicatedStorage.Season.Players[v.Value].Value
+        PlayerPicked = game.ReplicatedStorage.Season.Players[v.Name].Value
+                  SEND = PlayerVoted .." voted for " ..PlayerPicked
+   Rayfield:Notify({
+	Title = "Voting",
+	Content = SEND,
+	Duration = 2.5,
+	Image = 4483362458,
+	Actions = { -- Notification Buttons
+		Ignore = {
+			Name = "Okay!",
+			Callback = function()
+				print("The user tapped Okay!")
+			end
+		},
+	},
+})
          end
    end,
 })
