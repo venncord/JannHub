@@ -30,7 +30,7 @@ local Tab = Window:CreateTab("Total Roblox Drama", 16451926444) -- Title, Image
 
 local Section = Tab:CreateSection("Game - Things that enhance gameplay",false)
 
-local Button = Tab:CreateButton({
+local Button = Section:CreateButton({
    Name = "Get Safety Statue",
    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
@@ -55,9 +55,51 @@ local Button = Tab:CreateButton({
    end,
 })
 
+local Toggle = Section:CreateToggle({
+   Name = "Auto Win Obbies",
+   Info = "Speaks for itself.", -- Speaks for itself, Remove if none.
+   CurrentValue = false,
+   Flag = "Toggle12", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+         if Value == true then
+            for i,v in pairs (workspace:GetDescendants()) do
+                if v.Name == "Finish" then
+                    v.CanCollide = false
+                    v.Transparency = 1
+                    wait()
+                    v.Position = game.Players.LocalPlayer.Character.Torso.Position
+                end
+            end
+         end
+   end,
+})
+
+local Toggle = Section:CreateToggle({
+   Name = "Auto Collect Coins",
+   Info = "Speaks for itself.", -- Speaks for itself, Remove if none.
+   CurrentValue = false,
+   Flag = "Toggle123", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+            while collectcoinsloop == true do
+               task.wait()
+                for i,v in pairs (workspace:GetDescendants()) do
+                    if v.Name == "Gem" then
+                        v.Transparency = 1
+                        wait()
+                        v.Position = game.Players.LocalPlayer.Character.Torso.Position
+                    elseif v.Name == "Coin" then
+                        v.Transparency = 1
+                        wait()
+                        v.Position = game.Players.LocalPlayer.Character.Torso.Position
+                    end
+                end
+         end
+   end,
+})
+
 local Section1 = Tab:CreateSection("Modifications - Modify the games settings",false)
 
-local Input = Tab:CreateInput({
+local Input = Section1:CreateInput({
    Name = "Buy Character",
    Info = "Enter the text of the character you would like to purchase, it doesnt have to be a real character. Bypasses chat filter.", -- Speaks for itself, Remove if none.
    PlaceholderText = "Input Text",
