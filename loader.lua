@@ -58,41 +58,6 @@ local Button = Tab:CreateButton({
    end,
 })
 
-local Toggle6235 = Tab:CreateToggle({
-   Name = "Auto Win Math",
-   Info = "Speaks for itself. burps", -- Speaks for itself, Remove if none.
-   CurrentValue = false,
-   Flag = "Toggle122125", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-			        while true do
-            number = 0
-            for i = 1, 10 do
-                function automathloopfix()
-                if CurrentValue == true then
-                    number = number + 1
-                    local s = game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].MainText.Text
-                    local e = s:gsub("=","")
-                    local g = e:gsub("?","")
-                    local x = g:gsub(" ","")
-                    local y = x
-                    local f = loadstring("return " .. y)()
-                    wait()
-                    game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].Box.Text = f
-                    task.wait()
-                    local button = game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].Enter
-        
-                    local events = {"MouseButton1Click", "MouseButton1Down", "Activated"}
-                    for i,v in pairs(events) do
-                        for i,v in pairs(getconnections(button[v])) do
-                            v:Fire()
-                        end
-                    end
-                    task.wait(0.75)
-                end
-            end
-   end,
-})
-
 local ToggleVotesThing = Tab:CreateToggle({
     Name = "Notify Votes",
     Info = "Speaks for itself", -- Speaks for itself, Remove if none.
