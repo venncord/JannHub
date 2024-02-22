@@ -58,18 +58,16 @@ local Button = Tab:CreateButton({
    end,
 })
 
-local AutoMathThingyMcJigglybobs = Tab:CreateToggle({
-    Name = "Auto Math",
-    Info = "Automatically solves math problems", -- Description of the toggle
-    CurrentValue = false, -- Initial state of the toggle
-    Flag = "Toggle11412", -- Unique identifier for the toggle
-    Callback = function(Value)
-        automathloop = CurrentValue
-        while automathloop == true do
+local MathThingLmfao = Tab:CreateToggle({
+   Name = "Auto-Win Math Mania",
+   Info = "Toggle info/Description.", -- Speaks for itself, Remove if none.
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
             number = 0
             for i = 1, 10 do
                 function automathloopfix()
-                if automathloop == true then
+                if Value == true then
                     number = number + 1
                     local s = game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].MainText.Text
                     local e = s:gsub("=","")
@@ -91,13 +89,10 @@ local AutoMathThingyMcJigglybobs = Tab:CreateToggle({
                     task.wait(0.5)
                 end
             end
-            wait()
+				            task.wait()
             pcall(automathloopfix)
             end
-        end
-        wait()
-    end)
-    end,
+   end,
 })
 
 
