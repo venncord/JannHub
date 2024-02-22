@@ -1,5 +1,22 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 
+local function sendnotification(text)
+	Rayfield:Notify({
+	Title = "Voting Detected",
+	Content = text,
+	Duration = 2.5,
+	Image = 4483362458,
+	Actions = { -- Notification Buttons
+		Ignore = {
+			Name = "Okay!",
+			Callback = function()
+				print("The user tapped Okay!")
+			end
+		},
+	},
+})
+end
+
 local Window = Rayfield:CreateWindow({
    Name = "Jann Hub",
    LoadingTitle = "Loading Jann Hub",
@@ -111,21 +128,7 @@ local Toggle11 = Tab:CreateToggle({
         PlayerVoted = game.ReplicatedStorage.Season.Players[v.Value].Value
         PlayerPicked = game.ReplicatedStorage.Season.Players[v.Name].Value
                   SEND = PlayerVoted .." voted for " ..PlayerPicked
-	Rayfield:Notify({
-	Title = "Voting Detected",
-	Content = SEND,
-	Duration = 2.5,
-	Image = 4483362458,
-	Actions = { -- Notification Buttons
-		Ignore = {
-			Name = "Okay!",
-			Callback = function()
-				print("The user tapped Okay!")
-			end
-		},
-	},
-})
-		end
+						sendnotification(SEND)
          end
    end,
 })
