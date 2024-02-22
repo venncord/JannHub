@@ -87,7 +87,7 @@ local Toggle6235 = Tab:CreateToggle({
                             v:Fire()
                         end
                     end
-                    task.wait(0.0001)
+                    task.wait(0.75)
                 end
             end
    end,
