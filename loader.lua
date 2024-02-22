@@ -74,11 +74,6 @@ local ToggleVotesThing = Tab:CreateToggle({
                     Content = SEND,
                     Duration = 2.5,
                     Image = 4483362458,
-                    Actions = { -- Notification Buttons
-                        Ignore = {
-                            Name = "Okay!",
-                            Callback = function()
-                                print("The user tapped Okay!")
                             end
                         },
                     }
