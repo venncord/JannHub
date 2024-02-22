@@ -61,7 +61,7 @@ local Toggle = Tab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle12", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
-         if Value == true then
+         while Value == true do
             for i,v in pairs (workspace:GetDescendants()) do
                 if v.Name == "Finish" then
                     v.CanCollide = false
