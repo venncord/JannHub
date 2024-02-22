@@ -55,6 +55,48 @@ local Button = Tab:CreateButton({
    end,
 })
 
+local Toggle = Section:CreateToggle({
+   Name = "Auto Win Obbies",
+   Info = "Speaks for itself.", -- Speaks for itself, Remove if none.
+   CurrentValue = false,
+   Flag = "Toggle12", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+         if Value == true then
+            for i,v in pairs (workspace:GetDescendants()) do
+                if v.Name == "Finish" then
+                    v.CanCollide = false
+                    v.Transparency = 1
+                    wait()
+                    v.Position = game.Players.LocalPlayer.Character.Torso.Position
+                end
+            end
+         end
+   end,
+})
+
+local Toggle1 = Section:CreateToggle({
+   Name = "Auto Collect Coins",
+   Info = "Speaks for itself.", -- Speaks for itself, Remove if none.
+   CurrentValue = false,
+   Flag = "Toggle123", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+            while collectcoinsloop == true do
+               task.wait()
+                for i,v in pairs (workspace:GetDescendants()) do
+                    if v.Name == "Gem" then
+                        v.Transparency = 1
+                        wait()
+                        v.Position = game.Players.LocalPlayer.Character.Torso.Position
+                    elseif v.Name == "Coin" then
+                        v.Transparency = 1
+                        wait()
+                        v.Position = game.Players.LocalPlayer.Character.Torso.Position
+                    end
+                end
+         end
+   end,
+})
+
 local Section1 = Tab:CreateSection("Modifications - Modify the games settings",false)
 
 local Input = Tab:CreateInput({
