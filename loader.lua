@@ -26,7 +26,36 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab = Window:CreateTab("Modifications", 16451926444) -- Title, Image
+local Tab = Window:CreateTab("Total Roblox Drama", 16451926444) -- Title, Image
+
+local Section = Tab:CreateSection("Game - Things that enhance gameplay",false)
+
+local Button = Tab:CreateButton({
+   Name = "Get Safety Statue",
+   Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+   for i,v in pairs (workspace.Idols:GetDescendants()) do
+                if v.Name == "Bag" then
+                    v.hit.Transparency = 1
+                    v.hit.CanCollide = false
+                    wait()
+                    v.hit.Position = game.Players.LocalPlayer.Character.Torso.Position
+                    task.wait()
+                    v:Destroy()
+                    wait()
+                elseif v.Name == "SafetyStatue" then
+                    v.hit.Transparency = 1
+                    v.hit.CanCollide = false
+                    wait()
+                    v.hit.Position = game.Players.LocalPlayer.Character.Torso.Position
+                    wait()
+                end
+            end
+   end,
+})
+
+local Section1 = Tab:CreateSection("Modifications - Modify the games settings",false)
 
 local Input = Tab:CreateInput({
    Name = "Buy Character",
