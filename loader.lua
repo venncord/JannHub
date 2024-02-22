@@ -1,4 +1,3 @@
-
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 
 local Window = Rayfield:CreateWindow({
@@ -31,7 +30,7 @@ local Tab = Window:CreateTab("Total Roblox Drama", 16451926444) -- Title, Image
 
 local Section = Tab:CreateSection("Game - Things that enhance gameplay",false)
 
-local Button = Section:CreateButton({
+local Button = Tab:CreateButton({
    Name = "Get Safety Statue",
    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
