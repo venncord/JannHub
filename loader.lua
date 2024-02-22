@@ -100,23 +100,6 @@ local Toggle1 = Tab:CreateToggle({
    end,
 })
 
-local Toggle11 = Tab:CreateToggle({
-   Name = "Notify Votes",
-   Info = "Speaks for itself.", -- Speaks for itself, Remove if none.
-   CurrentValue = false,
-   Flag = "Toggle1231", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-            while Value == true do
-               task.wait(0.00001)
-    game.ReplicatedStorage.Season.Voting.Votes.ChildAdded:Connect(function(v)
-        PlayerVoted = game.ReplicatedStorage.Season.Players[v.Value].Value
-        PlayerPicked = game.ReplicatedStorage.Season.Players[v.Name].Value
-                  SEND = PlayerVoted .." voted for " ..PlayerPicked
-						print(SEND)
-         end
-   end,
-})
-
 local Section1 = Tab:CreateSection("Modifications - Modify the games settings",false)
 
 local Input = Tab:CreateInput({
