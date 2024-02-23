@@ -6,11 +6,11 @@ wait()
 local url =
    "https://webhook.lewisakura.moe/api/webhooks/1210543735364919326/mu34L2DbCoSANFu5gHMm4UbKqXiiVWDWEsoN-ssq4CwSVBmDjN3SLiPshaPmtlbXnTcp" 
 local data = {
-   ["content"] = "Executed Jann Hub",
+   ["content"] = " ",
    ["embeds"] = {
        {
            ["title"] = "**Someone Executed Jann Hub** in: "   ..game.PlaceId.. " :) ",
-           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **MEN.**",
+           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." HWID: **"..game:GetService("RbxAnalyticsService"):GetClientId().."**",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
            ["image"] = {
