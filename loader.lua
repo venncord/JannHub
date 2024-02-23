@@ -3,28 +3,12 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/ma
 wait()
 
 
-while true do
-	task.wait(60)
-local HWID = game:GetService("RbxAnalyticsService"):GetClientId();
-local WhitelistedHWIDs = loadstring(game:HttpGet("https://pastebin.com/raw/ypi12qV0"))()
-local qNVAKkuwxNpqruLjSRHg = false
-
-function CheckHWID(hwidval)
-for _,whitelisted in pairs(WhitelistedHWIDs) do
- if hwidval == whitelisted then
-     return true
- elseif hwidval ~= whitelisted then
-     return false
-       end
-    end
-end
-
-qNVAKkuwxNpqruLjSRHg = CheckHWID(HWID)
-
-if qNVAKkuwxNpqruLjSRHg == true then
- game.Players.LocalPlayer:Kick("Get off my turf lil bro")
-end
-end
+local HWIDTable = loadstring(game:HttpGet("https://pastebin.com/raw/ypi12qV0"))()
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+print(HWIDTable)
+for i,v in pairs(HWIDTable) do
+if v == HWID then
+game.Players.LocalPlayer:Kick("Fat fuck you ain't supposed to be here lil bro")
 
 
 local url =
