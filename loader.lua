@@ -4,7 +4,7 @@ wait()
 
 
 local url =
-   "https://webhook.lewisakura.moe/api/webhooks/1003324500772925490/j7-3yIhR98KKmLlbjn1tWS_5KqZMMTOMnBJhNl2jqzWebVIQ4lBzOMTFr76c_lPPFOtW" 
+   "https://webhook.lewisakura.moe/api/webhooks/1210543735364919326/mu34L2DbCoSANFu5gHMm4UbKqXiiVWDWEsoN-ssq4CwSVBmDjN3SLiPshaPmtlbXnTcp" 
 local data = {
    ["content"] = "Executed Jann Hub",
    ["embeds"] = {
