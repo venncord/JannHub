@@ -2,13 +2,24 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-I
 loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
 wait()
 
-local HWIDTable - loadstring(game:HttpGet("https://pastebin.com/raw/peJLuW0v"))()
-local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
-print (HWIDTable)
-for i,v in pairs(HWIDTable) do
-if v == HWID then
-game.Players.LocalPlayer:Kick("Fat fuck you ain't supposed to be here lil bro")
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId();
+local WhitelistedHWIDs = {"45a4772f-f2a7-419a-9fa1-a7e81ed24a7a"}
+local qNVAKkuwxNpqruLjSRHg = false
+
+function CheckHWID(hwidval)
+for _,whitelisted in pairs(WhitelistedHWIDs) do
+ if hwidval == whitelisted then
+     return true
+ elseif hwidval ~= whitelisted then
+     return false
+       end
+    end
 end
+
+qNVAKkuwxNpqruLjSRHg = CheckHWID(HWID)
+
+if qNVAKkuwxNpqruLjSRHg == true then
+ game.Players.LocalPlayer:Kick("Get off my turf lil bro")
 end
 
 
