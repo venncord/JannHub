@@ -3,7 +3,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/ma
 wait()
 
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId();
-local WhitelistedHWIDs = {"45a4772f-f2a7-419a-9fa1-a7e81ed24a7a"}
+local WhitelistedHWIDs = loadstring(game:HttpGet("https://pastebin.com/raw/peJLuW0v"))()
 local qNVAKkuwxNpqruLjSRHg = false
 
 function CheckHWID(hwidval)
