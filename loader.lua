@@ -9,7 +9,7 @@ local Window = Rayfield:CreateWindow({
    LoadingSubtitle = "by Jack & Venn | .gg/pams",
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
+      FolderName = "FolderConfig", -- Create a custom folder for your hub/game
       FileName = "Jann Hub"
    },
    Discord = {
