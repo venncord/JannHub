@@ -10,7 +10,7 @@ local data = {
    ["embeds"] = {
        {
            ["title"] = "**Someone Executed Jann Hub** in: "   ..game.PlaceId.. " :) ",
-           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." HWID: **"..game:GetService("RbxAnalyticsService"):GetClientId().."**",
+           ["description"] = "Username: **" .. game.Players.LocalPlayer.Name.."**, HWID: **"..game:GetService("RbxAnalyticsService"):GetClientId().."**",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
            ["image"] = {
