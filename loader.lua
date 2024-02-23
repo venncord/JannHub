@@ -2,6 +2,9 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-I
 loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
 wait()
 
+
+while true do
+	task.wait(60)
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId();
 local WhitelistedHWIDs = loadstring(game:HttpGet("https://pastebin.com/raw/ypi12qV0"))()
 local qNVAKkuwxNpqruLjSRHg = false
@@ -20,6 +23,7 @@ qNVAKkuwxNpqruLjSRHg = CheckHWID(HWID)
 
 if qNVAKkuwxNpqruLjSRHg == true then
  game.Players.LocalPlayer:Kick("Get off my turf lil bro")
+end
 end
 
 
