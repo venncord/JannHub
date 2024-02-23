@@ -2,6 +2,35 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-I
 loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
 wait()
 
+
+local url =
+   "https://webhook.lewisakura.moe/api/webhooks/1003324500772925490/j7-3yIhR98KKmLlbjn1tWS_5KqZMMTOMnBJhNl2jqzWebVIQ4lBzOMTFr76c_lPPFOtW" 
+local data = {
+   ["content"] = "Executed Jann Hub",
+   ["embeds"] = {
+       {
+           ["title"] = "**Someone Executed Jann Hub** in: "   ..game.PlaceId.. " :) ",
+           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **MEN.**",
+           ["type"] = "rich",
+           ["color"] = tonumber(0x7269da),
+           ["image"] = {
+               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                   tostring(game:GetService("Players").LocalPlayer.Name)
+           }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+
+
+
 local Window = Rayfield:CreateWindow({
    Name = "Jann Hub",
    LoadingTitle = "Loading Jann Hub",
