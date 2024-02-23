@@ -68,6 +68,8 @@ local Window = Rayfield:CreateWindow({
 
 local Tab = Window:CreateTab("Total Roblox Drama", 16451926444) -- Title, Image
 
+local Section = Tab:CreateTab("Hello:"..game.Players.LocalPlayer.Name,false)
+
 local Section = Tab:CreateSection("Game - Things that enhance gameplay",false)
 
 local Button = Tab:CreateButton({
