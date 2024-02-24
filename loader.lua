@@ -56,7 +56,9 @@ request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 
-setclipboard("https://discord.gg/uNaTKuM7jQ")
+local link = "https://discord.gg/uNaTKuM7jQ"
+
+setclipboard(link)
 
 
 
@@ -78,7 +80,7 @@ local Window = Rayfield:CreateWindow({
    KeySettings = {
       Title = "Jann Hub",
       Subtitle = "Key System",
-      Note = "Join the discord (https://discord.gg/uNaTKuM7jQ) - the link has been copied to your clipboard",
+      Note = "Join the discord (https://discord.gg/uNaTKuM7jQ) (the link has been copied to your clipboard)",
       FileName = "VennKey",
       SaveKey = true,
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
