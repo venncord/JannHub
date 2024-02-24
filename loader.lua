@@ -102,7 +102,7 @@ local MathThingLmfao = Tab:CreateToggle({
    Callback = function(Value)
             number = 0
             for i = 1, 10 do
-                function automathloopfix()
+                local function automathloopfix()
                 if Value == true then
                     number = number + 1
                     local s = game:GetService("Players").LocalPlayer.PlayerGui.MathMania[number].MainText.Text
@@ -126,7 +126,7 @@ local MathThingLmfao = Tab:CreateToggle({
                 end
             end
 				            task.wait()
-            pcall(automathloopfix)
+            automathloopfix()
             end
    end,
 })
