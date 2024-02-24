@@ -56,6 +56,8 @@ request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 
+setclipboard("https://discord.gg/uNaTKuM7jQ")
+
 
 
 local Window = Rayfield:CreateWindow({
@@ -69,18 +71,18 @@ local Window = Rayfield:CreateWindow({
    },
    Discord = {
       Enabled = false,
-      Invite = "pams", -- The Discord invite code, do not include discord.gg/
+      Invite = "uNaTKuM7jQ", -- The Discord invite code, do not include discord.gg/
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
-   KeySystem = false, -- Set this to true to use our key system
+   KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
       Title = "Jann Hub",
       Subtitle = "Key System",
-      Note = "Join the discord (discord.gg/pams)",
+      Note = "Join the discord (https://discord.gg/uNaTKuM7jQ) - the link has been copied to your clipboard",
       FileName = "VennKey",
       SaveKey = true,
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = "ilovemen231"
+      Key = "BIOtioPodLICedInVagIbuseNtiStroStortiMoTHIGEtutiCA"
    }
 })
 
