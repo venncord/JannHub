@@ -65,7 +65,7 @@ setclipboard(link)
 local Window = Rayfield:CreateWindow({
    Name = "Jann Hub",
    LoadingTitle = "Loading Jann Hub",
-   LoadingSubtitle = "by Jack & Venn | .gg/pams",
+   LoadingSubtitle = "by Jack & Venn | .gg/uNaTKuM7jQ",
    ConfigurationSaving = {
       Enabled = true,
       FolderName = "FolderConfig", -- Create a custom folder for your hub/game
