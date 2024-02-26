@@ -5,12 +5,11 @@ local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 -- Create a Frame to hold the UI elements
--- Create a Frame to hold the UI elements
 local frame = Instance.new("Frame")
 frame.Size = UDim2.new(0, 300, 0, 200) -- Set the size of your UI frame
-frame.Position = UDim2.new(0.5, -150, 0.5, -90) -- Set the initial position of your UI frame (adjusted by 10 pixels)
+frame.Position = UDim2.new(0.5, -150, 0.5, -100) -- Set the initial position of your UI frame
 frame.BackgroundColor3 = Color3.new(1, 1, 1) -- Set background color
-frame.BackgroundTransparency = 1 -- Set transparency to 1
+frame.BackgroundTransparency = 0.5 -- Set transparency to 0.5
 frame.BorderSizePixel = 0
 frame.Parent = ScreenGui
 
@@ -72,6 +71,9 @@ local Window = Rayfield:CreateWindow({
         Key = "x7Rg2YpL4JnIc6Xa8Wb3Ko2Tg9Hr1Zl5Pm2Qs8Vn3"
     }
 })
+
+-- Rest of your code...
+
 
 
 local Tab = Window:CreateTab("Total Roblox Drama", 16451926444) -- Title, Image
