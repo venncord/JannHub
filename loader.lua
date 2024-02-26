@@ -8,25 +8,6 @@ game.Players.PlayerAdded:Connect(function(Player)
 	end
 end)
 
-local HWID = game:GetService("RbxAnalyticsService"):GetClientId();
-local WhitelistedHWIDs = {"3e1c4b4e-9faf-4909-9bfe-f02ede989c70"}
-local qNVAKkuwxNpqruLjSRHg = false
- 
-function CheckHWID(hwidval)
-for _,whitelisted in pairs(WhitelistedHWIDs) do
- if hwidval == whitelisted then
-     return true
- elseif hwidval ~= whitelisted then
-     return false
-       end
-    end
-end
- 
-qNVAKkuwxNpqruLjSRHg = CheckHWID(HWID)
- 
-if qNVAKkuwxNpqruLjSRHg == true then
- game.Players:Kick("L")
-end
  
 
 
@@ -86,7 +67,6 @@ local Window = Rayfield:CreateWindow({
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = "x7Rg2YpL4JnIc6Xa8Wb3Ko2Tg9Hr1Zl5Pm2Qs8Vn3"
    }
-   Draggable = true -- Making the UI draggable
 })
 
 
