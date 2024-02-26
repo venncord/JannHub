@@ -86,7 +86,9 @@ local Window = Rayfield:CreateWindow({
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = "x7Rg2YpL4JnIc6Xa8Wb3Ko2Tg9Hr1Zl5Pm2Qs8Vn3"
    }
+   Draggable = true -- Making the UI draggable
 })
+
 
 local Tab = Window:CreateTab("Total Roblox Drama", 16451926444) -- Title, Image
 
