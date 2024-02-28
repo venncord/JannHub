@@ -168,7 +168,7 @@ local ToggleVotesThing2a = Tab:CreateToggle({
     Callback = function(Value)
         game.ReplicatedStorage.Season.Twists.Bags.ChildAdded:Connect(function(v)
             if Value == true then
-                PlayerVoted2 = game.ReplicatedStorage.Season.Players[v.Value].Value
+	                PlayerVoted2 = game.ReplicatedStorage.Season.Players[v.Name].Value
                 local SEND2 = PlayerVoted .. " got a bag"
                 Rayfield:Notify({
                     Title = "Bag Detected",
