@@ -172,7 +172,7 @@ local ToggleVotesThing2a = Tab:CreateToggle({
                 local SEND2 = PlayerVoted2 .. " got a bag!"
                 Rayfield:Notify({
                     Title = "Bag Detected",
-                    Content = SEND,
+                    Content = SEND2,
                     Duration = 1,
                     Image = 4483362458
                 })
