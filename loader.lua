@@ -160,11 +160,11 @@ local ToggleVotesThing = Tab:CreateToggle({
     end
 })
 
-local ToggleVotesThing = Tab:CreateToggle({
+local ToggleVotesThing2a = Tab:CreateToggle({
     Name = "Notify When a User gets a Bag",
     Info = "Speaks for itself", -- Speaks for itself, Remove if none.
     CurrentValue = false,
-    Flag = "Toggle121412", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "Toggle12141242", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
         game.ReplicatedStorage.Season.Twists.Bags.ChildAdded:Connect(function(v)
             if Value == true then
