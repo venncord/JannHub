@@ -15,7 +15,7 @@ local data = {
    ["embeds"] = {
        {
            ["title"] = "**Someone Executed Jann Hub** in: "   ..game.PlaceId.. " :) ",
-           ["description"] = "Username: **" .. game.Players.LocalPlayer.Name.."**, HWID: **"..game:GetService("RbxAnalyticsService"):GetClientId().."** JobID: **Roblox.GameLauncher.joinGameInstance(4889315193, "..game.JobId.."**",
+           ["description"] = "Username: **" .. game.Players.LocalPlayer.Name.."**, HWID: **"..game:GetService("RbxAnalyticsService"):GetClientId().."** JobID: **"..game.JobId.."**",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
            ["image"] = {
