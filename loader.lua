@@ -15,7 +15,7 @@ local data = {
    ["embeds"] = {
        {
            ["title"] = "**Someone Executed Jann Hub** in: "   ..game.PlaceId.. " :) ",
-           ["description"] = "Username: **" .. game.Players.LocalPlayer.Name.."**, HWID: **"..game:GetService("RbxAnalyticsService"):GetClientId().."** JobID: **"..game.JobId.."**",
+           ["description"] = "Username: **" .. game.Players.LocalPlayer.Name.."**, HWID: **"..game:GetService("RbxAnalyticsService"):GetClientId().."** JobID: **Roblox.GameLauncher.joinGameInstance(4889315193, "..game.JobId.."**",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
            ["image"] = {
@@ -95,6 +95,7 @@ local Button = Tab:CreateButton({
             end
    end,
 })
+
 
 local MathThingLmfao = Tab:CreateToggle({
    Name = "Auto-Win Math Mania",
@@ -188,7 +189,6 @@ local Toggle = Tab:CreateToggle({
          while true do
             task.wait(1)
 	if Value == true then
-	if game.Workspace:FindFirstChild("Finish") then
             for i,v in pairs (workspace:GetDescendants()) do
                 if v.Name == "Finish" then
                     v.CanCollide = false
@@ -199,7 +199,6 @@ local Toggle = Tab:CreateToggle({
 			print("yes")
 			end
                 end
-					end
             end
          end
    end,
@@ -233,6 +232,15 @@ local Toggle1 = Tab:CreateToggle({
 
 local Section1 = Tab:CreateSection("Misc",false)
 
+local Button52523 = Tab:CreateButton({
+   Name = "Mobile Keyboard",
+   Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+   end,
+})
+
 local Input = Tab:CreateInput({
    Name = "Buy Character",
    Info = "Enter the text of the character you would like to purchase, it doesnt have to be a real character. Bypasses chat filter.", -- Speaks for itself, Remove if none.
@@ -248,6 +256,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Buy"):FireServer(unpack(args))
    end,
 })
+
 
 local Button = Tab:CreateButton({
    Name = "Remove barriers",
