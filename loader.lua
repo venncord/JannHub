@@ -207,17 +207,12 @@ local ToggleVoaasraatawsesThingtwa2a = Tab:CreateToggle({
 })
 
 
-local Toggle = Tab:CreateToggle({
-   Name = "Auto Win Obbies",
-   Info = "Speaks for itself. burps", -- Speaks for itself, Remove if none.
-   CurrentValue = false,
-   Flag = "Toggle12", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-         while true do
-            task.wait(1)
-	if Value == true then
-		if game.Workspace.Assets:FindFirstChild("Finish",true) then
-            for i,v in pairs(game.Workspace:GetDescendants()) do
+local B3as2u5ast353as23253a2saon322523 = Tab:CreateButton({
+   Name = "Win Obby",
+   Info = "yea", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+			            for i,v in pairs(game.Workspace:GetDescendants()) do
                 if v.Name == "Finish" then
                     v.CanCollide = false
                     v.Transparency = 1
@@ -227,12 +222,8 @@ local Toggle = Tab:CreateToggle({
 			print("yes")
 			end
                 end
-            end
-				end
-         end
    end,
 })
-
 
 
 local Toggle1 = Tab:CreateToggle({
