@@ -216,8 +216,8 @@ local Toggle = Tab:CreateToggle({
          while true do
             task.wait(1)
 	if Value == true then
-	game.Workspace.Assets.ChildAdded:Connect(function(thing)
-	if game.Workspace.Assets:FindFirstChild("Finish",true) then
+	game.Workspace.Assets.ChildAdded:Connect(function(child)
+	if child.Name == "Finish" then
             for i,v in pairs(game.Workspace:GetDescendants()) do
                 if v.Name == "Finish" then
                     v.CanCollide = false
