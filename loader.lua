@@ -189,7 +189,8 @@ local Toggle = Tab:CreateToggle({
          while true do
             task.wait(1)
 	if Value == true then
-            for i,v in pairs (workspace:GetDescendants()) do
+	if game.Workspace.Assets:FindFirstChild("Finish",true) then
+            for i,v in pairs(game.Workspace:GetDescendants()) do
                 if v.Name == "Finish" then
                     v.CanCollide = false
                     v.Transparency = 1
@@ -200,6 +201,7 @@ local Toggle = Tab:CreateToggle({
 			end
                 end
             end
+	end
          end
    end,
 })
