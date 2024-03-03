@@ -230,7 +230,8 @@ local Toggle = Tab:CreateToggle({
                 end
             end
 	end
-         end
+					end
+         end)
    end,
 })
 
