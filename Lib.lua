@@ -165,8 +165,45 @@ local SearchBar = Main.Searchbar
 local Filler = SearchBar.CanvasGroup.Filler
 local Prompt = Main.Prompt
 local NotePrompt = Main.NotePrompt
-Topbar.Draggable = true
-Main.Draggable = true
+local TweenService = game:GetService("TweenService")
+local mouse
+local mouseHeld = false
+
+local a = button.InputBegan:Connect(function(input)
+	
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then 
+
+		mouseHeld = true
+		
+		while mouseHeld == true do
+
+			task.wait()
+			
+			mouse = game:GetService("UserInputService"):GetMouseLocation()
+			
+			TweenService:Create(Main, TweenInfo.new(.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {Position = UDim2.new(0, mouse.X, 0, mouse.Y)}):Play()
+
+		end
+
+	end
+
+end)
+
+local b = button.InputEnded:Connect(function(input)
+
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then 
+
+		mouseHeld = false
+
+		while mouseHeld == false do
+
+			task.wait()
+
+		end
+
+	end
+
+end)
 
 Rayfield.DisplayOrder = 100
 LoadingFrame.Version.Text = Release
