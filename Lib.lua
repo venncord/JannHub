@@ -167,6 +167,7 @@ local Prompt = Main.Prompt
 local NotePrompt = Main.NotePrompt
 local TweenService = game:GetService("TweenService")
 
+
 Rayfield.DisplayOrder = 100
 LoadingFrame.Version.Text = Release
 
@@ -3657,6 +3658,10 @@ for _, TopbarButton in ipairs(Topbar:GetChildren()) do
 		end)
 	end
 end
+
+Main.Active = true
+
+Main.Draggable = true 
 
 
 function RayfieldLibrary:LoadConfiguration()
