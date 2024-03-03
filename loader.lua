@@ -71,6 +71,33 @@ local Tab = Window:CreateTab("Total Roblox Drama", 16451926444) -- Title, Image
 
 local Section = Tab:CreateSection("Game - Things that enhance gameplay",false)
 
+local Bsaea32autton2523523523 = Tab:CreateButton({
+   Name = "Break Spleef",
+   Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+			for i,v in pairs(game.Workspace:GetDescendants()) do
+				if v.Name == "SpleefPart" then 
+					firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 0) 
+				end
+			end
+   end,
+})
+
+local Butt32623on2525325235263523523 = Tab:CreateButton({
+   Name = "Insta-Eat Pancake (THIS MIGHT NOT WORK)",
+   Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+for i,v in pairs(game.Workspace:GetDescendants()) do
+if v.Name == game.Players.LocalPlayer.Name then
+fireclickdetector(v.ClickDetector)
+end
+end 
+
+   end,
+})
+
 local Button = Tab:CreateButton({
    Name = "Get Safety Statue",
    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
