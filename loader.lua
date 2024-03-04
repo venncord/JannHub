@@ -99,7 +99,7 @@ end
 })
 
 local Butt32623on2525325235263523523 = Tab:CreateButton({
-    Name = "OG Gen (Could work and replaces Mullet Jenna",
+    Name = "OG Gen (Could work and replaces Band Nishele Skin)",
     Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
     Interact = 'Changable',
     Callback = function()
