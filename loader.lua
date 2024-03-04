@@ -252,6 +252,15 @@ local Toggle1 = Tab:CreateToggle({
 
 local Section1 = Tab:CreateSection("Misc",false)
 
+local Busa642ea424tton5262325as523 = Tab:CreateButton({
+   Name = "Auto-Report",
+   Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/CF-Trail/Auto-Report/main/main.lua", true))()
+   end,
+})
+
 local Button52523 = Tab:CreateButton({
    Name = "Mobile Keyboard",
    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
