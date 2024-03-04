@@ -2,25 +2,9 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/venn
 loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Adonis%20Anti-Cheat%20Bypass.lua"))()
 wait()
 
-local HWID = game:GetService("RbxAnalyticsService"):GetClientId();
-local WhitelistedHWIDs = {"80e56303-ea6e-4aac-91f5-86f50f0b574e"}
-local qNVAKkuwxNpqruLjSRHg = false
-
-function CheckHWID(hwidval)
-for _,whitelisted in pairs(WhitelistedHWIDs) do
- if hwidval == whitelisted then
-     return true
- elseif hwidval ~= whitelisted then
-     return false
-       end
-    end
-end
-
-qNVAKkuwxNpqruLjSRHg = CheckHWID(HWID)
-
-if qNVAKkuwxNpqruLjSRHg == true then
- game.Players.LocalPlayer:Kick("You have been blacklisted from using Jann Hub.")
-end
+game.Players.PlayerAdded:Connect(function(Player)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/venncord/JannHub/main/chattags.lua"))()
+end)
 
 game.Players.PlayerAdded:Connect(function(Player)
 	if Player.Name == "ProAIt5000" then
