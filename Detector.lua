@@ -92,13 +92,13 @@ Players.PlayerAdded:Connect(function(player)
     local playerName = player.Name
     local tagInfo = whitelisted[playerName]
     if tagInfo and playerName ~= Players.LocalPlayer.Name then
-        notify("Smoke Team", playerName .. " is a " .. tagInfo.nametag .. " (" .. tagInfo.nametag2 .. ").", 8)
+        notify("Jann Hub Team", playerName .. " is a " .. tagInfo.nametag .. " (" .. tagInfo.nametag2 .. ").", 8)
     end
 end)
 
 local tagInfo = whitelisted[Players.LocalPlayer.Name]
 if tagInfo then
-    notify("Smoke Private", "You are a Smoke Private (" .. tagInfo.nametag .. ") (" .. tagInfo.nametag2 .. ").", 3)
+    notify("Jann Hub Private", "You are a Jann Hub Private (" .. tagInfo.nametag .. ") (" .. tagInfo.nametag2 .. ").", 3)
 end
 
 local tagInfo = whitelisted[Players.LocalPlayer.Name]
@@ -108,7 +108,7 @@ if not tagInfo then
         local properties = Instance.new("TextChatMessageProperties")
         local player = game:GetService("Players"):GetPlayerByUserId(message.TextSource.UserId)
             if player and player.Name == Players.LocalPlayer.Name then
-                properties.PrefixText = "<font color='#FFF703'>[SMOKE USER]</font> " .. message.PrefixText
+                properties.PrefixText = "<font color='#1f9492'>[JANN HUB USER]</font> " .. message.PrefixText
             end
         return properties
     end
