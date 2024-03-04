@@ -129,7 +129,7 @@ local Butt32623on2525325235263523523 = Tab:CreateButton({
                 v.tvk = {"kick",function() return game.Workspace:WaitForChild("") end} 
             end 
         end
-    end,
+    end
 })
 
 local Button = Tab:CreateButton({
