@@ -1,0 +1,38 @@
+{
+    "rhwoakdbrysoan": {
+        "nametag": "xysim",
+        "nametag2": "xysim",
+        "headname": "[SMOKE OWNER]",
+        "chattag": "[SMOKE OWNER]",
+        "color": "#FF3232",
+        "GodMode": true,
+        "Admin": true
+    },
+    "No_AnimationPlayer": {
+        "nametag": "SMOKE PRIVATE",
+        "nametag2": "?!?",
+        "headname": "[SMOKE PRIVATE]",
+        "chattag": "[SMOKE PRIVATE]",
+        "color": "#C637ED",
+        "GodMode": true,
+        "Admin": false
+    },
+    "testaccount41246": {
+        "nametag": "weirddy",
+        "nametag2": "w3irddy",
+        "headname": "[boblock hacar 😱]",
+        "chattag": "[weirddy]",
+        "color": "#5D07A4",
+        "GodMode": true,
+        "Admin": true
+    },
+    "DankMemerX_D": {
+        "nametag": "VIEW",
+        "nametag2": "view",
+        "headname": "[VIEW]",
+        "chattag": "[VIEW]",
+        "color": "#FF1100",
+        "GodMode": true,
+        "Admin": false
+    }
+}
