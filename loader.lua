@@ -278,16 +278,13 @@ local B3as2u5ast353as23253a2saon322523 = Tab:CreateButton({
    Info = "yea", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
-			            for i,v in pairs(game.Workspace:GetDescendants()) do
-                if v.Name == "Finish" then
+if game.Workspace.Assets:FindFirstChild("Finish",true) then
+				local v = game.Workspace.Assets:FindFirstChild("Finish",true)
                     v.CanCollide = false
                     v.Transparency = 1
                     wait()
                     v.Position = game.Players.LocalPlayer.Character.Torso.Position
-			else
-			print("yes")
 			end
-                end
    end,
 })
 
