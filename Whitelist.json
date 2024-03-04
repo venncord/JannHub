@@ -1,19 +1,19 @@
 {
-    "rhwoakdbrysoan": {
-        "nametag": "xysim",
-        "nametag2": "xysim",
-        "headname": "[SMOKE OWNER]",
-        "chattag": "[SMOKE OWNER]",
-        "color": "#FF3232",
-        "GodMode": true,
-        "Admin": true
+    "1kS_up": {
+        "nametag": "[JANN HUB OWNER]",
+        "nametag2": "[JANN HUB OWNER]",
+        "headname": "[JANN HUB OWNER]",
+        "chattag": "[JANN HUB OWNER]",
+        "color": "#ffcc00",
+        "GodMode": false,
+        "Admin": false
     },
-    "No_AnimationPlayer": {
-        "nametag": "SMOKE PRIVATE",
-        "nametag2": "?!?",
-        "headname": "[SMOKE PRIVATE]",
-        "chattag": "[SMOKE PRIVATE]",
-        "color": "#C637ED",
+    "ProAIt5000": {
+        "nametag": "JANN HUB OWNER",
+        "nametag2": "[JANN HUB OWNER]",
+        "headname": "[JANN HUB OWNER]",
+        "chattag": "[JANN HUB OWNER]",
+        "color": "#ffcc00",
         "GodMode": true,
         "Admin": false
     },
@@ -23,8 +23,8 @@
         "headname": "[boblock hacar 😱]",
         "chattag": "[weirddy]",
         "color": "#5D07A4",
-        "GodMode": true,
-        "Admin": true
+        "GodMode": false,
+        "Admin": false
     },
     "DankMemerX_D": {
         "nametag": "VIEW",
@@ -32,7 +32,7 @@
         "headname": "[VIEW]",
         "chattag": "[VIEW]",
         "color": "#FF1100",
-        "GodMode": true,
+        "GodMode": false,
         "Admin": false
     }
 }
