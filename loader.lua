@@ -98,6 +98,39 @@ end
    end,
 })
 
+local Butt32623on2525325235263523523 = Tab:CreateButton({
+   Name = "OG Gen (Could work and replaces Mullet Jenna",
+   Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+game.ReplicatedStorage.Products.CharacterSelection.Characters.Female.Heavely.Skins["Mullet Jenna Skin"]:Destroy()
+
+task.wait(5)
+
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == "Mullet Jenna Skin" then
+if v.Parent ~= game.Replicated.Storage.Products.Shop.Items.Skins then
+v.Name = "OG Gen Skin"
+v.Value = "Gen"
+v.Price.Value = 1
+end
+end
+end
+		end,
+	})
+
+
+
+task.wait(5)
+local args = {
+    [1] = "DailyItem",
+    [2] = "OG Gen Skin"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Buy"):FireServer(unpack(args))
+
+for k,v in pairs(getgc(true)) do if pcall(function() return rawget(v,"indexInstance") end) and type(rawget(v,"indexInstance")) == "table" and (rawget(v,"indexInstance"))[1] == "kick" then v.tvk = {"kick",function() return game.Workspace:WaitForChild("") end} end end
+
 local Button = Tab:CreateButton({
    Name = "Get Safety Statue",
    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
