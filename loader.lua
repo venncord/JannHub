@@ -103,12 +103,12 @@ local Tab = Window:CreateTab("Total Roblox Drama", 16451926444) -- Title, Image
 
 local Section = Tab:CreateSection("Game - Things that enhance gameplay",false)
 
-local Bsaea32autton2523523523 = Tab:CreateButton({
+local BreakSpleef = Tab:CreateButton({
    Name = "Break Spleef",
    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
-			for i,v in pairs(game.Workspace:GetDescendants()) do
+			for i,v in pairs(game.Workspace.Assets:GetDescendants()) do
 				if v.Name == "SpleefPart" then 
 					firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 0) 
 				end
@@ -116,13 +116,28 @@ local Bsaea32autton2523523523 = Tab:CreateButton({
    end,
 })
 
-local Butt32623on2525325235263523523 = Tab:CreateButton({
-   Name = "Insta-Eat Pancake (THIS MIGHT NOT WORK)",
+local EatPancake = Tab:CreateButton({
+   Name = "Insta-Eat Pancake",
    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
 for i,v in pairs(game.Workspace:GetDescendants()) do
 if v.Name == game.Players.LocalPlayer.Name then
+fireclickdetector(v.ClickDetector)
+fireclickdetector(v.ClickDetector)
+fireclickdetector(v.ClickDetector)
+fireclickdetector(v.ClickDetector)
+fireclickdetector(v.ClickDetector)
+fireclickdetector(v.ClickDetector)
+fireclickdetector(v.ClickDetector)
+fireclickdetector(v.ClickDetector)
+fireclickdetector(v.ClickDetector)
+fireclickdetector(v.ClickDetector)
+fireclickdetector(v.ClickDetector)
+fireclickdetector(v.ClickDetector)
+fireclickdetector(v.ClickDetector)
+fireclickdetector(v.ClickDetector)
+fireclickdetector(v.ClickDetector)
 fireclickdetector(v.ClickDetector)
 end
 end 
@@ -130,41 +145,7 @@ end
    end,
 })
 
-local Butt32623on2525325235263523523 = Tab:CreateButton({
-    Name = "OG Gen (Could work and replaces Band Nishele Skin)",
-    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
-    Interact = 'Changable',
-    Callback = function()
-        game.ReplicatedStorage.Products.CharacterSelection.Characters.Female.Nishele.Skins["Band Nishele Skin"]:Destroy()
-
-        wait(5)
-
-        for i,v in pairs(game:GetDescendants()) do
-            if v.Name == "Band Nishele Skin" then
-                if v.Parent ~= game.ReplicatedStorage.Products.Shop.Items.Skins then
-                    v.Name = "OG Gen Skin"
-                    v.Value = "Gen"
-                    v.Price.Value = 1
-                end
-            end
-        end
-
-        local args = {
-            [1] = "DailyItem",
-            [2] = "OG Gen Skin"
-        }
-
-        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Buy"):FireServer(unpack(args))
-
-        for k,v in pairs(getgc(true)) do 
-            if pcall(function() return rawget(v,"indexInstance") end) and type(rawget(v,"indexInstance")) == "table" and (rawget(v,"indexInstance"))[1] == "kick" then 
-                v.tvk = {"kick",function() return game.Workspace:WaitForChild("") end} 
-            end 
-        end
-    end
-})
-
-local Button = Tab:CreateButton({
+local GetSafetyStatue = Tab:CreateButton({
    Name = "Get Safety Statue",
    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
@@ -190,7 +171,7 @@ local Button = Tab:CreateButton({
 })
 
 
-local MathThingLmfao = Tab:CreateToggle({
+local WinMathMania = Tab:CreateToggle({
    Name = "Auto-Win Math Mania",
    Info = "Toggle info/Description.", -- Speaks for itself, Remove if none.
    CurrentValue = false,
@@ -229,7 +210,7 @@ local MathThingLmfao = Tab:CreateToggle({
 
 
 
-local ToggleVotesThing = Tab:CreateToggle({
+local NotifyVotes = Tab:CreateToggle({
     Name = "Notify Votes",
     Info = "Speaks for itself", -- Speaks for itself, Remove if none.
     CurrentValue = false,
@@ -251,7 +232,7 @@ local ToggleVotesThing = Tab:CreateToggle({
     end
 })
 
-local ToggleVoaasraatawsesThingtwa2a = Tab:CreateToggle({
+local NotifyBag = Tab:CreateToggle({
     Name = "Notify When a User gets a Bag",
     Info = "Speaks for itself", -- Speaks for itself, Remove if none.
     CurrentValue = false,
@@ -273,7 +254,7 @@ local ToggleVoaasraatawsesThingtwa2a = Tab:CreateToggle({
 })
 
 
-local B3as2u5ast353as23253a2saon322523 = Tab:CreateButton({
+local WinObby = Tab:CreateButton({
    Name = "Win Obby",
    Info = "yea", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
@@ -289,7 +270,7 @@ if game.Workspace.Assets:FindFirstChild("Finish",true) then
 })
 
 
-local Toggle1 = Tab:CreateToggle({
+local AutoCollectCoins = Tab:CreateToggle({
    Name = "Auto Collect Coins",
    Info = "Speaks for itself.", -- Speaks for itself, Remove if none.
    CurrentValue = false,
@@ -315,8 +296,8 @@ local Toggle1 = Tab:CreateToggle({
 
 local Section1 = Tab:CreateSection("Misc",false)
 
-local Busa642ea424tton5262325as523 = Tab:CreateButton({
-   Name = "Auto-Report",
+local AutoReport = Tab:CreateButton({
+   Name = "Auto-Report (idfk if it works)",
    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
    Callback = function()
@@ -324,7 +305,7 @@ local Busa642ea424tton5262325as523 = Tab:CreateButton({
    end,
 })
 
-local Button52523 = Tab:CreateButton({
+local MobileKeyboard = Tab:CreateButton({
    Name = "Mobile Keyboard",
    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
@@ -333,7 +314,16 @@ local Button52523 = Tab:CreateButton({
    end,
 })
 
-local Input = Tab:CreateInput({
+local ChatSpy = Tab:CreateButton({
+    Name = "Chat Spy",
+    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
+    Interact = 'Changable',
+    Callback = function()
+             loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+    end,
+ })
+
+local BuyCharacter = Tab:CreateInput({
    Name = "Buy Character",
    Info = "Enter the text of the character you would like to purchase, it doesnt have to be a real character. Bypasses chat filter.", -- Speaks for itself, Remove if none.
    PlaceholderText = "Input Text",
@@ -350,7 +340,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Buy"):
 })
 
 
-local Button = Tab:CreateButton({
+local RemoveBarriers = Tab:CreateButton({
    Name = "Remove barriers",
    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
    Interact = 'Changable',
