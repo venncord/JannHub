@@ -19,7 +19,7 @@ end)
 
 
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId();
-local WhitelistedHWIDs = {"80e56303-ea6e-4aac-91f5-86f50f0b574e","aaec3553-ce01-4376-bd7b-28f4d6c1a072","0485fa7c-562c-4066-b966-3f999cdc0ff7"}
+local WhitelistedHWIDs = {"80e56303-ea6e-4aac-91f5-86f50f0b574e","aaec3553-ce01-4376-bd7b-28f4d6c1a072","0485fa7c-562c-4066-b966-3f999cdc0ff7","f797be3c-31ec-4998-ba2f-98ae8d94e9ed"}
 local qNVAKkuwxNpqruLjSRHg = false
 
 function CheckHWID(hwidval)
