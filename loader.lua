@@ -68,10 +68,6 @@ request(abcdef)
 
 local link = "https://discord.gg/uNaTKuM7jQ"
 
-setclipboard(link)
-
-
-
 local Window = Rayfield:CreateWindow({
    Name = "Jann Hub",
    LoadingTitle = "Loading Jann Hub",
@@ -90,7 +86,7 @@ local Window = Rayfield:CreateWindow({
    KeySettings = {
       Title = "Jann Hub",
       Subtitle = "Key System",
-      Note = "Join the discord (https://discord.gg/uNaTKuM7jQ) (the link has been copied to your clipboard)",
+      Note = "Join the discord (https://discord.gg/uNaTKuM7jQ)",
       FileName = "VennKey",
       SaveKey = true,
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
