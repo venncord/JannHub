@@ -282,14 +282,9 @@ local ManipulateVotes = Tab:CreateToggle({
 local thing = v.Value
                 local SEND = PlayerVoted .. " voted for " .. PlayerPicked
 						if thing == game.Players.LocalPlayer.Name then
-							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
-							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
-							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
-							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
-							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
-							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
-							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
-							
+							v:Clone()
+							v:Clone()
+							v:Clone()
 						end
             end
         end)
