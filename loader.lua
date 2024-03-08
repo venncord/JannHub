@@ -279,52 +279,51 @@ local ManipulateVotes = Tab:CreateToggle({
     Callback = function(Value)
         game.ReplicatedStorage.Season.Voting.Votes.ChildAdded:Connect(function(v)
             if Value == true then
-                PlayerVoted = game.ReplicatedStorage.Season.Players[v.Value].Value
-                PlayerPicked = game.ReplicatedStorage.Season.Players[v.Name].Value
+local thing = v.Value
                 local SEND = PlayerVoted .. " voted for " .. PlayerPicked
-						if PlayerPicked.Value == game.Players.LocalPlayer.Name then
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-														v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-														v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-														v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-														v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-														v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-														v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
-							v:Clone()
+						if thing == game.Players.LocalPlayer.Name then
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
+							v:Clone().Parent = game.ReplicatedStorage.Season.Voting.Votes
 							
 						end
             end
