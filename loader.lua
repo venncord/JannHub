@@ -379,7 +379,16 @@ local ChatSpy = Tab:CreateButton({
     Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
     Interact = 'Changable',
     Callback = function()
-             loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+             loadstring(game:HttpGet(('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/ChatSpy.lua'),true))()
+    end,
+ })
+
+local ChatSpy = Tab:CreateButton({
+    Name = "Shaders",
+    Info = "60% chance of Safety Statue spawning", -- Speaks for itself, Remove if none.
+    Interact = 'Changable',
+    Callback = function()
+             loadstring(game:HttpGet(('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/RTX%20Shaders.lua'),true))()
     end,
  })
 
