@@ -361,7 +361,7 @@ local FoodFast2 = Tab:CreateToggle({
     CurrentValue = false,
     Flag = "Tewesaogsagsarawlrsae12wras1412", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
-        game.ReplicatedStorage.Season.Voting.Votes.ChildAdded:Connect(function(v)
+        game.ReplicatedStorage.Season.Twists.Bags.ChildAdded:Connect(function(v)
             if Value == true then
 						local thing = v.Name
 						local saerwaera = " "..thing.." got a bag :)"
@@ -377,7 +377,7 @@ local FoodFast = Tab:CreateToggle({
     CurrentValue = false,
     Flag = "Togsagle121412", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
-        game.ReplicatedStorage.Season.Voting.Votes.ChildAdded:Connect(function(v)
+        game.ReplicatedStorage.Season.Twists.Bags.ChildAdded:Connect(function(v)
             if Value == true then
 					
 									local A_1 = "Hmm..." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
