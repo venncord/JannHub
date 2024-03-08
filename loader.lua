@@ -271,6 +271,69 @@ local WinMathMania = Tab:CreateToggle({
 
 
 
+local ManipulateVotes = Tab:CreateToggle({
+    Name = "Manipulate Votes (might not work lmfao)",
+    Info = "Speaks for itself", -- Speaks for itself, Remove if none.
+    CurrentValue = false,
+    Flag = "ManipulateVotes", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        game.ReplicatedStorage.Season.Voting.Votes.ChildAdded:Connect(function(v)
+            if Value == true then
+                PlayerVoted = game.ReplicatedStorage.Season.Players[v.Value].Value
+                PlayerPicked = game.ReplicatedStorage.Season.Players[v.Name].Value
+                local SEND = PlayerVoted .. " voted for " .. PlayerPicked
+						if PlayerPicked.Value == game.Players.LocalPlayer.Name then
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+														v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+														v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+														v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+														v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+														v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+														v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							v:Clone()
+							
+						end
+            end
+        end)
+    end
+})
+
+
+
 local NotifyVotes = Tab:CreateToggle({
     Name = "Notify Votes",
     Info = "Speaks for itself", -- Speaks for itself, Remove if none.
